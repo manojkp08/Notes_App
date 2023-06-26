@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NotesApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimaryVariant">@color/colorPrimary</item>
+        <item name="colorPrimary">#0823CD</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary"></item>
+        <item name="colorSecondaryVariant"></item>
+        <item name="colorOnSecondary"></item>
+<!--        <item name="windowActionBar">false</item>-->
+        <!-- android status bar color -->
+        <item name="android:statusBarColor" tools:targetApi = "l">#FFFBDA00</item>
+    </style>
+
+    <style name="Theme.NotesApp" parent="Base.Theme.NotesApp" />
+
+    <style name="BottomSheetStyle" parent="Theme.Material3.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Modal</item>
+    </style>
+
+    <style name="Modal" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/delete_bottom_sheet</item>
+    </style>
+
+</resources>
