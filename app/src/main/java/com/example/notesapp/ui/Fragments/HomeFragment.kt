@@ -48,7 +48,7 @@ class HomeFragment : Fragment() {
             binding.allNotes.adapter = adapter
         })
 
-        binding.btnFilterHigh.setOnClickListener {
+        binding.filterHigh.setOnClickListener {
             viewModel.getHighNotes().observe(viewLifecycleOwner, {notesList ->
                 oldMyNotes = notesList as ArrayList<Notes>
                 //StaggeredGrilayoutManager for the recyclerView.
@@ -62,7 +62,7 @@ class HomeFragment : Fragment() {
             })
         }
 
-        binding.btnFilterMedium.setOnClickListener {
+        binding.filterMedium.setOnClickListener {
             viewModel.getMediumNotes().observe(viewLifecycleOwner, {notesList ->
                 oldMyNotes = notesList as ArrayList<Notes>
                 //StaggeredGrilayoutManager for the recyclerView.
@@ -73,7 +73,7 @@ class HomeFragment : Fragment() {
             })
         }
 
-        binding.btnFilterLow.setOnClickListener {
+        binding.filterLow.setOnClickListener {
             viewModel.getLowNotes().observe(viewLifecycleOwner, {notesList ->
                 oldMyNotes = notesList as ArrayList<Notes>
                 //StaggeredGrilayoutManager for the recyclerView.
@@ -88,7 +88,7 @@ class HomeFragment : Fragment() {
             Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_createNotesFragment)
         }
 
-        binding.btnFilter.setOnClickListener {
+        binding.btnAllNotes.setOnClickListener {
             viewModel.getNotes().observe(viewLifecycleOwner, {notesList ->
                 oldMyNotes = notesList as ArrayList<Notes>
                 //StaggeredGrilayoutManager for the recyclerView.
